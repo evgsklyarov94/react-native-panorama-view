@@ -82,6 +82,7 @@ const FullScreenPanorama = () => (
 | -------------------- | ----------------------------------- | --------------------------------------------------------------------------------------------------------- |
 | imageUrl             | string                              | Remote or local URI for fetching the panorama image.                                                      |
 | enableTouchTracking  | boolean                             | Enables dragging the panorama by touch when `true`.                                                       |
+| enableResetCameraAngles  | boolean                             | Enable reset camera angle when panorama uploaded new image when `true` **iOS only**.                                                       |
 | onImageLoadingFailed | callback                            | Fired when something goes wrong while trying to load the panorama.                                        |
 | onImageDownloaded    | callback                            | Fired when the image was successfully downloaded. This will fire before onImageLoaded                     |
 | onImageLoaded        | callback                            | Fired when the image was successfully loaded.                                                             |

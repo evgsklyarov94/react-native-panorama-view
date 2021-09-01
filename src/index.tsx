@@ -6,6 +6,7 @@ export type PanoramaViewProps = {
   dimensions?: { width: number; height: number }; // Android-only
   inputType?: "mono" | "stereo"; // Android-only
   enableTouchTracking?: boolean;
+  enableResetCameraAngles: boolean;
   onImageLoadingFailed?: () => void;
   onImageDownloaded?: () => void;
   onImageLoaded?: () => void;
@@ -18,6 +19,7 @@ export const PanoramaView: React.FC<PanoramaViewProps> = ({
   onImageLoaded,
   dimensions,
   inputType,
+  enableResetCameraAngles = true,
   ...props
 }) => {
   const _onImageLoadingFailed = () => {
@@ -55,6 +57,7 @@ export const PanoramaView: React.FC<PanoramaViewProps> = ({
       onImageDownloaded={_onImageDownloaded}
       onImageLoaded={_onImageLoaded}
       onImageLoadingFailed={_onImageLoadingFailed}
+      enableResetCameraAngles={enableResetCameraAngles}
     />
   );
 };

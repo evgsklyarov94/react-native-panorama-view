@@ -10,6 +10,11 @@ import Foundation
     @objc public var onImageLoadingFailed: RCTDirectEventBlock? = nil
     @objc public var onImageDownloaded: RCTDirectEventBlock? = nil
     @objc public var onImageLoaded: RCTDirectEventBlock? = nil
+    @objc public var enableResetCameraAngles: Bool = true {
+        didSet {
+            self.panoramaView?.enableResetCameraAngles = enableResetCameraAngles;
+        }
+    }
     
     @objc public var enableTouchTracking: Bool = true {
         didSet {

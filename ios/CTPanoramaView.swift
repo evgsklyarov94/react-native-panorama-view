@@ -47,6 +47,7 @@ import ImageIO
     @objc public var minFoV: CGFloat = 20
     @objc public var defaultFoV: CGFloat = 80
     @objc public var maxFoV: CGFloat = 100
+    @objc public var enableResetCameraAngles: Bool = true;
 
     @objc public var image: UIImage? {
         didSet {
@@ -184,10 +185,12 @@ import ImageIO
     // MARK: Public methods
 
     public func resetCameraAngles() {
-        cameraNode.eulerAngles = SCNVector3Make(0, startAngle, 0)
-        totalX = Float.zero
-        totalY = Float.zero
-        self.reportMovement(CGFloat(startAngle), xFov.toRadians(), callHandler: false)
+        if (self.enableResetCameraAngles) {
+            cameraNode.eulerAngles = SCNVector3Make(0, startAngle, 0)
+            totalX = Float.zero
+            totalY = Float.zero
+            self.reportMovement(CGFloat(startAngle), xFov.toRadians(), callHandler: false)
+        }
     }
 
     // MARK: Configuration helper methods

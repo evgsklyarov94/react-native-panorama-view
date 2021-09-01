@@ -15,5 +15,6 @@ RCT_EXPORT_VIEW_PROPERTY(onImageLoadingFailed, RCTDirectEventBlock);
 RCT_EXPORT_VIEW_PROPERTY(onImageDownloaded, RCTDirectEventBlock);
 RCT_EXPORT_VIEW_PROPERTY(onImageLoaded, RCTDirectEventBlock);
 RCT_EXPORT_VIEW_PROPERTY(imageUrl, NSString);
+RCT_EXPORT_VIEW_PROPERTY(enableResetCameraAngles, BOOL);
 
 @end
