@@ -11,9 +11,6 @@ jobs:
       with:
         node-version: '15.x'
         registry-url: 'https://registry.npmjs.org'
-        scope: '@lightbase'
     - run: yarn
     - run: yarn build
     - run: yarn publish
-    env:
-        NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
