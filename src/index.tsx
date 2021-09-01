@@ -6,7 +6,7 @@ export type PanoramaViewProps = {
   dimensions?: { width: number; height: number }; // Android-only
   inputType?: "mono" | "stereo"; // Android-only
   enableTouchTracking?: boolean;
-  enableResetCameraAngles: boolean;
+  enableResetCameraAngles?: boolean;
   onImageLoadingFailed?: () => void;
   onImageDownloaded?: () => void;
   onImageLoaded?: () => void;
