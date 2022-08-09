@@ -143,6 +143,11 @@ public class PanoramaView extends VrPanoramaView implements LifecycleEventListen
                     istr = new FileInputStream(new File(imageUri.getPath()));
 
                 }
+                else if(value.contains("data:image/png;base64")) {
+                    String imageDataBytes = value.substring(value.indexOf(",")+1);
+
+                    istr = new ByteArrayInputStream(Base64.decode(imageDataBytes.getBytes(), Base64.NO_WRAP));
+                }
                 else{
                     URL url = new URL(value);
 
