@@ -26,6 +26,8 @@ import java.io.FileInputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
+import java.io.ByteArrayInputStream;
+import android.util.Base64;
 
 public class PanoramaView extends VrPanoramaView implements LifecycleEventListener {
     private static final String LOG_TAG = "PanoramaView";
