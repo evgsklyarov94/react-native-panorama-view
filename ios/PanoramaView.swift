@@ -45,7 +45,7 @@ import Foundation
                 self.cancel?()
                 self.cancel = nil
                 
-                self.cancel = loader.loadImage(with: request, callback: { (error, image) in
+                self.cancel = loader.loadImage(with: request!, callback: { (error, image) in
                     
                     DispatchQueue.main.async {
                         
